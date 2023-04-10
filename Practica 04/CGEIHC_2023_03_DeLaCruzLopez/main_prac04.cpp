@@ -7,7 +7,7 @@
 #include <glfw3.h>
 
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/matrix_transform.hpp>	
 #include <glm/gtc/type_ptr.hpp>
 
 #include <shader_m.h>
@@ -219,6 +219,48 @@ int main()
 		myShader.setVec3("aColor", glm::vec3(0.77f, 0.26f, 0.1f));//Esto cambia el color
 		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el hombro DERECHO (tomando referencia del profesor)
 
+		modelOp = glm::translate(glm::mat4(1.0f), glm::vec3(-3.0f, -4.0f, 0.0f));//En esta modificación estamos asignando la ubicación de nuestro torso, considerando como referencia a nuestro cuello, solo se requiero de crear variables temporales para poder operar las traslaciones desde ahí, sin ser afectados por las escala
+		modelOp = glm::scale(modelOp, glm::vec3(1.0f, 3.5f, 1.0f));
+		myShader.setMat4("model", modelOp);
+		myShader.setVec3("aColor", glm::vec3(0.1f, 0.15f, 0.9f));//Esto cambia el color
+		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el brazo DERECHO (tomando referencia del profesor)
+
+		modelOp = glm::translate(glm::mat4(1.0f), glm::vec3(3.0f, -4.0f, 0.0f));//En esta modificación estamos asignando la ubicación de nuestro torso, considerando como referencia a nuestro cuello, solo se requiero de crear variables temporales para poder operar las traslaciones desde ahí, sin ser afectados por las escala
+		modelOp = glm::scale(modelOp, glm::vec3(1.0f, 3.5f, 1.0f));
+		myShader.setMat4("model", modelOp);
+		myShader.setVec3("aColor", glm::vec3(0.1f, 0.15f, 0.9f));//Esto cambia el color
+		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el brazo izquierdo (tomando referencia del profesor)
+
+		modelOp = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, -7.25f, 0.0f));//En esta modificación estamos asignando la ubicación de nuestro torso, considerando como referencia a nuestro cuello, solo se requiero de crear variables temporales para poder operar las traslaciones desde ahí, sin ser afectados por las escala
+		modelOp = glm::scale(modelOp, glm::vec3(4.0f, 1.0f, 1.0f));
+		myShader.setMat4("model", modelOp);
+		myShader.setVec3("aColor", glm::vec3(0.19f, 0.28f, 0.31f));//Esto cambia el color
+		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el cadera (tomando referencia del profesor)
+
+		modelOp = glm::translate(glm::mat4(1.0f), glm::vec3(1.25f, -9.5f, 0.0f));//En esta modificación estamos asignando la ubicación de nuestro torso, considerando como referencia a nuestro cuello, solo se requiero de crear variables temporales para poder operar las traslaciones desde ahí, sin ser afectados por las escala
+		modelOp = glm::scale(modelOp, glm::vec3(1.5f, 3.5f, 1.0f));
+		myShader.setMat4("model", modelOp);
+		myShader.setVec3("aColor", glm::vec3(0.19f, 0.99f, 0.31f));//Esto cambia el color
+		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el pierna derecha (tomando referencia del profesor)
+
+		modelOp = glm::translate(glm::mat4(1.0f), glm::vec3(-1.25f, -9.5f, 0.0f));//En esta modificación estamos asignando la ubicación de nuestro torso, considerando como referencia a nuestro cuello, solo se requiero de crear variables temporales para poder operar las traslaciones desde ahí, sin ser afectados por las escala
+		modelOp = glm::scale(modelOp, glm::vec3(1.5f, 3.5f, 1.0f));
+		myShader.setMat4("model", modelOp);
+		myShader.setVec3("aColor", glm::vec3(0.19f, 0.99f, 0.31f));//Esto cambia el color
+		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el pierna izquierda (tomando referencia del profesor)
+
+		modelOp = glm::translate(glm::mat4(1.0f), glm::vec3(-1.75f, -11.625, 0.0f));//En esta modificación estamos asignando la ubicación de nuestro torso, considerando como referencia a nuestro cuello, solo se requiero de crear variables temporales para poder operar las traslaciones desde ahí, sin ser afectados por las escala
+		modelOp = glm::scale(modelOp, glm::vec3(2.5f, 0.75f, 1.0f));
+		myShader.setMat4("model", modelOp);
+		myShader.setVec3("aColor", glm::vec3(0.77f, 0.99f, 0.09f));//Esto cambia el color
+		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el pie izquierdo(tomando referencia del profesor)
+
+		modelOp = glm::translate(glm::mat4(1.0f), glm::vec3(1.75f, -11.625, 0.0f));//En esta modificación estamos asignando la ubicación de nuestro torso, considerando como referencia a nuestro cuello, solo se requiero de crear variables temporales para poder operar las traslaciones desde ahí, sin ser afectados por las escala
+		modelOp = glm::scale(modelOp, glm::vec3(2.5f, 0.75f, 1.0f));
+		myShader.setMat4("model", modelOp);
+		myShader.setVec3("aColor", glm::vec3(0.77f, 0.99f, 0.09f));//Esto cambia el color
+		glDrawArrays(GL_TRIANGLES, 0, 36); //Este cubo representa el pie izquierdo(tomando referencia del profesor)
+
 
 		glBindVertexArray(0);
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
@@ -244,25 +286,25 @@ void my_input(GLFWwindow* window)
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 		movX -= 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_PAGE_UP) == GLFW_PRESS)
-		movY += 1.08f;
+		movY += 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_PAGE_DOWN) == GLFW_PRESS)
-		movY -= 1.08f;
+		movY -= 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)//Cada que detecta que se presiona la tecla A, genera la acción en IF
-		movZ -= 1.01f;
+		movZ -= 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)//Cada que detecta que se presiona la tecla A, genera la acción en IF
-		movZ += 1.01f;
+		movZ += 0.01f;
 	if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
-		rotX-= 1.08f;
+		rotX-= 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
-		rotX += 1.08f;
+		rotX += 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
-		rotY -= 1.08f;
+		rotY -= 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
-		rotY += 1.08f;
+		rotY += 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_HOME) == GLFW_PRESS)
-		rotZ -= 1.08f;
+		rotZ -= 0.08f;
 	if (glfwGetKey(window, GLFW_KEY_END) == GLFW_PRESS)
-		rotZ += 1.08f;
+		rotZ += 0.08f;
 
 }
 
