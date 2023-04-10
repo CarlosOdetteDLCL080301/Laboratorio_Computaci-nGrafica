@@ -1,0 +1,4 @@
+C:\Users\CGIH03\source\repos\Repositorio_DeLaCruz\Laboratorio_Computaci-nGrafica\Practica 03\CGEIHC_2023_03_DeLaCruzLopez\Debug\CGEIHC_2023_03_DeLaCruzLopez.exe
+C:\Users\CGIH03\source\repos\Repositorio_DeLaCruz\Laboratorio_Computaci-nGrafica\Practica 04\CGEIHC_2023_03_DeLaCruzLopez\Debug\CGEIHC_2023_03_DeLaCruzLopez.exe
+F:\Users\Carlos Odettte DLCL\Documentos\Laboratorio_Computaci-nGrafica\Practica 04\CGEIHC_2023_03_DeLaCruzLopez\Debug\CGEIHC_2023_03_DeLaCruzLopez.exe
+F:\Users\Carlos Odettte DLCL\Documentos\Laboratorio_Computaci-nGrafica\Practica 04_TareaZombie\CGEIHC_2023_03_DeLaCruzLopez\Debug\CGEIHC_2023_03_DeLaCruzLopez.exe
